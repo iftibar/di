@@ -1,0 +1,48 @@
+body {
+    margin: auto;
+    padding: 0px;
+    background-image: url("https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/03/Captain-Americas-Header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav {   
+    background-color: black;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    }
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 10px;
+    overflow: hidden;
+    }
+
+li {
+    display: inline-block;
+    height: 40px;
+    margin: 0px;
+    padding: 40px;
+    float: right;
+    text-transform: uppercase;
+    color: white;
+    
+}
+h1 {
+    font-size: 70px;
+    font-weight: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    float: left;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-top: 50px;
+}
+p {
+    color: black;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    margin: 280px 1360px 350px 100px;
+}
