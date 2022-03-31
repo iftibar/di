@@ -24,7 +24,8 @@ let myWatchedSeries = ["black miror", "money heist", "big bang theory"];
 let myWatchedSeriesLength = 3
 let myWatchedSeriesSentence = ["darken future", "stilling gold", "didnt see"];
 console.log ('i watched', myWatchedSeriesLength, 'series:', myWatchedSeries);
-myWatchedSeries.splice(2,1, "friends")
+let bgtplace = indexof ('the big bang theory')
+myWatchedSeries.splice(bgtplace, 1, "friends")
 myWatchedSeries.push ('seinfled')
 myWatchedSeries.unshift ('someone somwhere');
 myWatchedSeries.splice (1,1)
