@@ -150,11 +150,11 @@ function rentalCarCost (days) {
             }             
             
     days = prompt("how many days do you want to rent a car?")        
-    if (isNaN(days)) {
-        prompt("sorry didnt get it, how many days to rent?")
-    }
-    days = Number(days);
-    return hotelCost(hotelNights) +  planeRideCost(destin) +  rentalCarCost(days);
+    while (isNaN(days)) {
+        days = prompt("sorry didnt get it, how many days to rent?")
+        }
+        days = Number(days);
+        return hotelCost(hotelNights) +  planeRideCost(destin) +  rentalCarCost(days);
 
  }
 
