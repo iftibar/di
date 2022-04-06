@@ -28,8 +28,7 @@ let bgtplace = indexof ('the big bang theory')
 myWatchedSeries.splice(bgtplace, 1, "friends")
 myWatchedSeries.push ('seinfled')
 myWatchedSeries.unshift ('someone somwhere');
-let bmPlace = indexof('black miror')
-myWatchedSeries.splice (bmPlace, 1)
+myWatchedSeries.splice (1,1)
 console.log (myWatchedSeries[1[2]]);
 
 let temp = 30;
@@ -146,11 +145,11 @@ typeof(1 != 2)
 
 true + true
 // Prediction:nan
-// Actual:2
+// Actual:
 
 true + false
 // Prediction:nan
-// Actual:1
+// Actual:2
 
 false + true
 // Prediction:nan

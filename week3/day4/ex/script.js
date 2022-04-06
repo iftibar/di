@@ -19,8 +19,7 @@ else {
 }
 
 let x = prompt('give me a number')
-let y = x%=2
-if (y == 0) {
+if (x % 2 == 0) {
     prompt(x, ' is even number'); 
 }
 else {
