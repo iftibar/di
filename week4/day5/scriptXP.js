@@ -23,10 +23,15 @@
 
 document.querySelector('div').style.backgroundColor ='lightblue';
 document.querySelector('div').style.padding ='20px';
-let ulis = document.getElementsByTagName('ul');
-ulis[0].style.display = 'none';
+// let line = document.querySelector('ul').firstElementChild;
+// line.style.display = 'none';
+// let line2 = document.querySelector('ul').lastElementChild;
+// line2.style.border = '10px solid'
 
-
+let list = document.getElementById('list');
+let first = list.childNodes[1];
+let second = first.nextSibling;
+second.style.display = 'none';
 
 
 
