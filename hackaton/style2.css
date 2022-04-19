@@ -1,9 +1,8 @@
 * {
     box-sizing: border-box;
     font-family: 'quicksand';
-
 }
-/* nav */
+/* nav bar*/
 .logo {
     height: fit-content;
     width: 10vw;
@@ -30,12 +29,12 @@ a {
 .push {
     margin-left: auto;
 }
-
+/* main cover */
 .cover {
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 58vh;
+    height: 80vh;
     background-image: url(assets/cover3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,9 +43,9 @@ a {
 }
 .text {
     padding: 60px;
-    width: 70%;
+    width: 60%;
+    
 }
-
 
 h1 {
     text-align: center;
@@ -61,38 +60,17 @@ h2 {
     padding: 30px;
     color: brown;
     font-size: 35px;
-
-}
-.cont {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    height: 40vh;
-    background-color: rgb(226, 246, 222);
-    margin: 0;
-
 }
 .col {
-    float: left;
-    padding: 25px;
-}
-
-.first, .second {
+    display: flex;
     width: 40%;
+    justify-content: center;
+    
 }
-label, input {
-    display: inline-block;
-    height: 24px;
-    width: 60%;
-    line-height: 40px;
-    border-radius: 4px;
-    font-size: 20px;
-}
-
 .area {
     max-width: 200px;
     height: 200px;
-    padding: 30px;
+    padding: 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -102,12 +80,12 @@ label, input {
     color:brown;
     border: 3px dashed orange;
     border-radius: 10px;
-    
-    }
+    margin: 20px;
+}
 .drop {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    
 }
 
 .drop-zone--over {
@@ -138,15 +116,76 @@ label, input {
     background: black(0,0,0, 0.7);
     font-size: 14px;
     text-align: center;
-
-
 }
-section {
-    float: right;
-    width: 20%;
-    margin: 30px;
-}
-.button {
+
+.section {
+    margin-left: 50px;
     align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 50px;
+}
+
+hr.bar {
+    margin-top: 20px;
+   border: solid 2px gray;
+}
+.btn {
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#card {
+    width: 33vw;
+    height: 43vh;
+    background-color: white;
+    border-radius: 8px;
+    display: none;
+    font-size: 25px;
+}
+
+#inputName {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+#Logo {
+    align-items: center
+    width 30px;
+    height: 30px;
+
+    }
+#left {
+    padding: 18px;
+    float: left;
+}
+
+#right {
+    padding: 18px;
+    float: right;
+}
+/* }
+#inputCategory{
 
 }
+
+#inputPhone {
+    
+}
+
+
+#inputEmail {
+    
+}
+
+#inputWebsite {
+    
+}
+
+#inputFacebook {
+    
+}
+
+#inputAdress {
+    
+/*  */

@@ -7,19 +7,15 @@
     <title>Document</title>
     </head>
 <body>
-    <img id="output_image" height=50px width=50px>
-    <input type="file" accept="image/*" onchange="preview_image(event)">
-
-<script type="text/javascript">
-  function preview_image(event) {
-    var reader = new FileReader();
-    reader.onload = function(){
-      var output = document.getElementById('output_image');
-      output.src = reader.result;
-    }
-    reader.readAsDataURL(event.target.files[0]);
-  }
-
-    <script src="script.js"></script>
+  <form action="begin-create-done.html" method="get">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+  
+  
+  
 </body>
 </html>

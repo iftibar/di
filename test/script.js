@@ -1,0 +1,1 @@
+var fname = document.getElementsByName("fname")[0].value;
