@@ -45,6 +45,7 @@ function updateThumbnail(dropZoneElement, file) {
         dropZoneElement.appendChild(thumbnailElement);
     }
     thumbnailElement.dataset.label = file.name;
+    let logo;
     if (file.type.startsWith("image")) {
         const reader = new FileReader();
 
@@ -52,32 +53,66 @@ function updateThumbnail(dropZoneElement, file) {
         reader.onload = () => {
             thumbnailElement.style.backgroundImage = `url("${reader.result}")`;
             thumbnailElement.style.backgroundsize = "cover";
-            thumbnailElement.style.backgroundPosition =  'center';
-            thumbnailElement.style.width = '100%';
-            console.log("${reader.result}");
+            thumbnailElement.style.backgroundPosition = 'center';
+            thumbnailElement.style.width = '245px';
+            document.getElementById("logo").src = reader.result;
+
         }
     }
+
 }
 
 let btn = document.getElementById('btn');
 btn.addEventListener("click", creatCard);
 
 // hide form and btn, then create the card and display it
- function creatCard() {
-     document.getElementById("col_").style.display='none';
-     document.getElementById('inputName').textContent = document.getElementById('name').value;
-     document.getElementById('inputCategory').textContent = document.getElementById('category').value;
-     document.getElementById('inputPhone').textContent = document.getElementById('phone').value;
-     document.getElementById('inputEmail').textContent = document.getElementById('email').value;
-     document.getElementById('inputWebsite').textContent = document.getElementById('website').value;
-     document.getElementById('inputFacebook').textContent = document.getElementById('facebook').value;
-     document.getElementById('inputAddress').textContent = document.getElementById('address').value;
-     document.getElementById('inputSentence').textContent = document.getElementById('sentence').value;
-    //  document.getElementById('logo').style.backgroundImage = thumbnailElement.style.backgroundImage;
-     document.getElementById("card").style.display="block"
-}
+function creatCard() {
+    document.getElementById("col_").style.display = 'none';
+    document.getElementById('inputName').textContent = document.getElementById('name').value;
+    document.getElementById('inputCategory').textContent = document.getElementById('category').value;
+    document.getElementById('inputPhone').textContent = document.getElementById('phone').value;
+    document.getElementById('inputEmail').textContent = document.getElementById('email').value;
+    document.getElementById('inputFacebook').textContent = document.getElementById('facebook').value;
+    document.getElementById('inputAddress').textContent = document.getElementById('address').value;
+    document.getElementById('inputSentence').textContent = '"' + document.getElementById('sentence').value + '"';
 
-// toggle - .hider
+    // create icon for website:
+    // web = document.getElementById('website').value;
+    // // web.setAttribute("href", "web")
+    // document.getElementById('inputWebsite') = web;
+    // document.getElementById('inputWebsite').innerHTML = web;
+    
+
+
+
+
+
+
+    document.getElementById("card").style.display = "flex";
+    document.getElementById("userDesign").style.display = "inline-block";
+
+    //  inputWebsite.href =  document.getElementById('website').value;
+
+
+
+}
+let color1 = document.querySelector('.color1');
+let color2 = document.querySelector('.color2');
+let card = document.getElementById('card');
+
+function setColor() {
+    card.style.background = "linear-gradient(to right,  "
+        + color1.value
+        + ", "
+        + color2.value
+        + ")";
+}
+color1.addEventListener('input', setColor)
+
+color2.addEventListener('input', setColor)
+
+
+
 
 
 

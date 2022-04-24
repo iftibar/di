@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prolo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>prolo2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,62 +17,90 @@
     <nav class="zone">
         <ul class="main-nav">
             <li><img class="logo" src="assets/logo.svg" alt=""></li>
-            <li><a href="">about</a></li>
-            <li><a href="">our team</a></li>
-            <li><a href="">our mission</a></li>
-            <li class="push"><a href="">contact us</a></li>
+            <li>about</a></li>
+            <li>our team</a></li>
+            <li>our mission</a></li>
+            <li class="push">contact us</a></li>
         </ul>
     </nav>
 
-    <div class="cover">
-        <div class="text">
-            <h1>welcome to prolo!</h1>
-            <h2>all you need to do is to fill all the inputs below,<br> and you will get your business card ready in a
-                second</h2>
-        </div>
-    </div>
-
     <div class="cont">
-        <div class="col first">
-            <form>
-                <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-                <label for="name">name:</label><br>
-                <input type="text" id="name" name="name" value="name of business please"><br>
-                <label for="category">category:</label><br>
-                <input type="text" id="category" name="category" value="category please"><br>
-                <label for="phone">phone:</label><br>
-                <input type="text" id="phone" name="phone" value="phone please"><br>
-                <label for="email">email:</label><br>
-                <input type="email" id="email" name="email" value="email please"><br>
+        <div class="cover">
+            <div class="text">
+                <h3><span> welcome to prolo!<br></span>
+                    all you need to do is to fill the details,<br>
+                    and you will get your business card ready <br>
+                    for you in a second </h3>
+            </div>
+            <div class="col" id="col_">
+                <form id="user">
+                    <input class="form-control form-control-lg" type="text" placeholder="name of business"
+                        aria-label="name" id="name">
+                    <input class="form-control form-control-lg" type="text" placeholder="category of business"
+                        aria-label="category" id="category">
+                    <input class="form-control form-control-lg" type="text" placeholder="your phone number"
+                        aria-label="phone" id="phone">
+                    <input class="form-control form-control-lg" type="text" placeholder="email" aria-label="email"
+                        id="email">
+                    <input class="form-control form-control-lg" type="url" placeholder="website" aria-label="website"
+                        id="website">
+                    <input class="form-control form-control-lg" type="text" placeholder="facebook page"
+                        aria-label="facebook" id="facebook">
+                    <input class="form-control form-control-lg" type="text" placeholder="address" aria-label="address"
+                        id="address">
+                    <input class="form-control form-control-lg" type="text" placeholder="one killer sentence 4-5 words"
+                        aria-label="sentence" id="sentence">
+
+                    <div class="drop">
+                        <div class="area drop-zone">
+                            <span class="drop-zone__prompt">drop your logo file here, or click to upload</span>
+                            <input type="file" name="your logo" class="drop-zone__input">
+                        </div>
+                        <section><button type="button" id="btn" class="btn btn-primary btn-lg">create you card!</button>
+                        </section>
+                    </div>
+                </form>
+            </div>
+
+            <section id="card" class="design">
+                <div id="left">
+                    <span id="inputName"></span><br>
+                    <span id="inputCategory"></span><br>
+                    <span id="inputPhone"></span><br><br><br><br>
+                    <span id="inputSentence"></span>
 
 
-            </form>
-        </div>
-        <div class="col second">
-            <form>
-                <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-                <label for="website">website:</label><br>
-                <input type="text" id="website" name="website" value="website please"><br>
-                <label for="facebook">facebook:</label><br>
-                <input type="text" id="facebook" name="facebook" value="facebook please"><br>
-                <label for="address">address:</label><br>
-                <input type="text" id="address" name="address" value="address please"><br>
-                <label for="sentece">sentece:</label><br>
-                <input type="text" id="sentece" name="sentece" value="one killer sentece please"><br>
+                </div>
+                <span><img id="logo"></span>
+                <div id="right">
+                    <span id="inputWebsite"><i class="fa-solid fa-link fa-2x"></i></span>
+                    <span id="inputEmail"></span>
+                    <!-- <span id="inputWebsite"></span><br> -->
+                    <span id="inputFacebook"></span><br>
+                    <span id="inputAddress"></span><br>
+                </div>
+            </section>
 
-            </form>
-        </div>
-        <div class="drop">
-            <div class="area drop-zone">
-                <span class="drop-zone__prompt">drop your logo file here, or click to upload</span>
-                <input type="file" name="your logo" class="drop-zone__input">
+            <div id="userDesign">
+                <div class="cont2">
+                    <input class="color1" type="color" name="color1" value="#ffffff">
+                    <input class="color2" type="color" name="color2" value="#ffffff">
+                    <h4>choose your background colors</h4>
+                    <div class="btn2">
+                        <button class="button">send your new beautiful card to your
+                            costumer</button>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-        <section><button type="button" class="btn btn-primary btn-lg">submit</button></section>
+    </div>
+
     </div>
 
 
-
+    <script src="https://kit.fontawesome.com/0026184341.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
