@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'quicksand';
+    /* font-family: 'quicksand'; */
 }
 
 /* nav bar*/
@@ -8,13 +8,12 @@
     height: fit-content;
     width: 10vw;
 }
-
 .main-nav {
     display: flex;
     list-style: none;
     font-size: 1.8em;
     margin: 0;
-    background-color: rgb(15, 124, 160);
+    background-color: rgb(11, 83, 107);
     overflow: hidden;
 }
 
@@ -35,7 +34,7 @@ li {
 /* main cover */
 .cover {
     display: flex;
-    height: 90vh;
+    height: 92vh;
     background-image: url(assets/coverH.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,21 +50,21 @@ li {
 
 h3 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 110px;
     padding: 20px;
-    color: rgb(8, 116, 152);
-    ;
-    font-size: 84px;
+    color:  rgb(11, 83, 107);    ;
+    font-size: 80px;
     float: left;
     letter-spacing: 0.02em;
-    font-weight: 500;
+    font-weight: 560;
 
 }
 
 .col {
-    /* display: flex; */
     width: 25%;
     justify-content: end;
+    background-color: white;
+  
 
 }
 
@@ -83,7 +82,7 @@ h3 {
     color: rgb(62, 8, 8);
     border: 5px dashed orange;
     border-radius: 10px;
-    margin-top: 35px;
+    margin-top: 140px;
 }
 
 #user {
@@ -148,10 +147,10 @@ h3 {
 }
 
 #btn {
-    width: 310px;
-    margin: 15px;
+    width: 330px;
+    margin: 40px;
     font-size: 40px;
-    background-color: rgb(15, 124, 160);
+    background-color:  rgb(11, 83, 107);
     ;
 
 }
@@ -162,8 +161,8 @@ h3 {
 }
 
 #card {
-    width: 41vw;
-    height: 46vh;
+    width: 66vw;
+    height: 66vh;
     background-color: white;
     border-radius: 8px;
     display: none;
@@ -173,12 +172,18 @@ h3 {
     border: 2px solid black;
     overflow: auto;
     resize: both;
+ 
 }
 
+hr {
+    border-top: 6px solid gray;
+}
 #inputName {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: 45px;
+    letter-spacing: 0.15em;
+    padding: 14px;
 }
 
 #logo {
@@ -195,12 +200,16 @@ h3 {
     padding: 12px;
     float: left;
     width: 33%;
+    font-family: Verdana, Tahoma, sans-serif;
+
+   
 }
+
 
 #right {
     padding: 12px;
     float: right;
-    width: 33%;
+    width: 42%;
 
 }
 
@@ -239,9 +248,10 @@ h3 {
     align-items: center;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 22px;
     margin: 50px;
-    background-color: rgb(247, 177, 97);
+    background-color: rgb(239, 217, 71);
+    border-radius: 50px;
 
 }
 
@@ -256,27 +266,29 @@ h4 {
     justify-content: center;
     background-color: yellow;
     overflow: auto;
-
  
 }
-/*  
+
 #inputPhone {
-    
+    margin-top: 10px;
 }
 
 
 #inputEmail {
-    
+    margin-top: 10px;
+
 }
 
 #inputWebsite {
-    
+    margin-top: 10px;
+
 }
 
 #inputFacebook {
-    
+    margin-top: 10px;
+
 }
 
 #inputAdress {
-    
-/*  */
+    margin-top: 10px;
+}
