@@ -44,37 +44,32 @@
 #     else:
 #         print(f"the letter {char} is a consonant")
 
-# # ex4?????
-# index = 0
-# user_name = ""
+# ex4
+# index = -1
 # names = ['Samus', 'Cortana', 'V', 'Link', 'Mario', 'Cortana', 'Samus']
 # user_name = input("what is your name? ")
 # for name in names:
-#     if name == user_name:
-#         index = names.index(user_name)
-#         print (f"the first position of {name} is at {index}")
+#     if user_name == name:
+#         index = names.index(name)
 #         break
 #     else:
-#         user_name = input("what is your name? ")
-#         for name in names:
-#             if name == user_name:
-#                 index = names.index(user_name)
-#                 print(f"the first position of {name} is at {index}")
-#                 break
-# # ex5????
-# spl = []
-# ind = 0
+#         continue
+# if index == -1:
+#     print("soory its not here")
+# else:
+#     print(f"the first position of {name} is at {index}")
+
+# # ex5
+# ind = -1
 # words = input("7 words please: ")
 # letter = input("enter a letter: ")
-# spl = words.split()
-# for word in spl:
-#     print(word, letter)
+# spl_words = words.split()
+# for word in spl_words:
 #     ind = word.find(letter)
-#     print(ind)
 #     if ind > -1:
-#         print(f"first index of {letter}" is {ind})
+#         print(f"first index of {letter} is located in {ind} in the word {word}")
 #     else:
-#         print("its not here im sorry")
+#         print(f"the letter {letter} is not in {word}")
 #
 # # ex6
 # num_list = []
@@ -83,6 +78,32 @@
 #     num_list.append(i)
 # sum_list = sum(num_list)
 # print(sum_list)
+# max = max(num_list)
+# min = min(num_list)
+# print(min, max)
 
-num_list = [num for num in  range(100)]
-print(sum(num_list), num_list)
+# # ex7
+# num_list = input("enter numbers: ")
+# new = num_list.replace(",","")
+# print(new)
+# print(list(new))
+# print(tuple(new))
+
+# ex8
+import random
+wins = 0
+random_num = random.randint(1, 9)
+num = int(input("what is your lucky number? "))
+while num != 99:
+    if num == random_num:
+        print("you won!!")
+        wins += 1
+        random_num = random.randint(1, 9)
+        num = int(input("try again? "))
+        continue
+    else:
+        print("better luck next time")
+        num = int(input("lets try again? "))
+print(f" yow won {wins} times, good job!")
+
+
