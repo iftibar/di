@@ -42,12 +42,24 @@ class MenuManager:
         self.menu.append(new)
 
     def update_item(self, name, price, spice, gluten):
-        for dish in self.menu:
+        for i, dish in enumerate(self.menu):
             if dish["name"] == name:
-                self.menu.pop(name)
-                rest.add_item(name, price, spice, gluten)
+               self.menu[i]["price"] = price
+               self.menu[i]["spice"] = spice
+               self.menu[i]["gluten"] = gluten
+               break
             else:
                 print("this dish isn't on the menu")
+                break
+
+    def remove_item(self, name):
+        for i, dish in enumerate(self.menu):
+            if self.menu[i]["name"] == name:
+                del self.menu[i]
+                break
+            else:
+                print("item isn't on the menu")
+                break
 
 menu = [
     {
@@ -82,7 +94,8 @@ menu = [
     }
  ]
 rest = MenuManager(menu)
-new_dish = {"name": 'pizza',"price": 12,"spice": "B","gluten": True}
+new_dish = {"name": 'pizza', "price": 12, "spice": "B", "gluten": True}
 rest.add_item(new_dish)
 rest.update_item("soup", 15, "B", False)
+rest.remove_item("soup")
 print(menu)
