@@ -149,10 +149,9 @@ class TicTacToe:
             self.show_board()
 
             # taking user input
-            self.get_user_play()
-            row = row - 1
-            col = col - 1
-
+            row, col = self.get_user_play()
+            row -= 1
+            col -= 1
             # fixing the spot
             if self.is_spot_clear(row, col):
                 self.fix_spot(row, col, player)

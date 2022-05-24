@@ -149,19 +149,43 @@ def febbu(num):
 # act.close_door(is_opened)
 # block = BlockedDoor(is_opened)
 # block.open_door()
-class Cat:
-	def __init__(self, name, age):
-	    self.name = name
-	    self.age = age
+# class Cat:
+# 	def __init__(self, name, age):
+# 	    self.name = name
+# 	    self.age = age
+#
+#
+# cat1 = Cat('jonny', 9)
+# cat2 = Cat('shush', 4)
+# cat3 = Cat('miuw', 13)
+# cat4 = Cat('psss', 2)
+#
+# def find_oldest(*cats):
+#     sort_cats = sorted(cats, key=lambda cat: cat.age)
+#     for cats in sort_cats:
+#         print(cats.name)
+# find_oldest(cat1, cat2, cat3, cat4)
+class MyClass(object):
+    count = 0
+
+    def __init__(self, val):
+        self.val = self.filterint(val)
+        MyClass.count += 1
+
+    @staticmethod
+    def filterint(value):
+        if not isinstance(value, int):
+            print("Entered value is not an INT, value set to 0")
+            return 0
+        else:
+            return value
 
 
-cat1 = Cat('jonny', 9)
-cat2 = Cat('shush', 4)
-cat3 = Cat('miuw', 13)
-cat4 = Cat('psss', 2)
+a = MyClass('a')
+b = MyClass(10)
+c = MyClass(15)
 
-def find_oldest(*cats):
-    sort_cats = sorted(cats, key=lambda cat: cat.age)
-    for cats in sort_cats:
-        print(cats.name)
-find_oldest(cat1, cat2, cat3, cat4)
+print(a.val)
+print(b.val)
+print(c.val)
+print(a.filterint(100))
