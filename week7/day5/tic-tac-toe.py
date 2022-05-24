@@ -42,6 +42,8 @@ import random
 
 class TicTacToe:
 
+    player = 'X'
+
     def __init__(self):
         self.board = []
 
@@ -52,10 +54,7 @@ class TicTacToe:
                 row.append('-')
             self.board.append(row)
 
-    def get_random_first_player(self):
-        return random.randint(0, 1)
-
-    def get_user_play(self):
+    def get_user_play(self, player):
         flag = True
         while flag:
             row, col = list(map(int, input("Enter row and column numbers to fix spot: ").split()))
@@ -66,13 +65,6 @@ class TicTacToe:
                 flag = False
         print(row, col)
         return row, col
-
-    def is_spot_clear(self, row, col):
-        if self.board[row][col] == '-':
-            return True
-        else:
-            print("spot is taken! choose another")
-            return False
 
     def fix_spot(self, row, col, player):
         self.board[row][col] = player
@@ -133,6 +125,21 @@ class TicTacToe:
     def swap_player_turn(self, player):
         return 'X' if player == 'O' else 'O'
 
+
+    def is_spot_clear(self, row, col, player):
+        if self.board[row][col] == '-':
+            return True
+        else:
+            print("spot is taken! choose another")
+            row, col = self.get_user_play(player)
+            row -= 1
+            col -= 1
+
+            # fixing the spot
+            if self.is_spot_clear(row, col, player):
+                self.fix_spot(row, col, player)
+
+
     def show_board(self):
         for row in self.board:
             for item in row:
@@ -141,21 +148,20 @@ class TicTacToe:
 
     def start(self):
         self.create_board()
-
-        player = 'X' if self.get_random_first_player() == 1 else 'O'
+        player = 'X'
         while True:
-            print(f"Player {player} turn")
+            print(f"\n Player {player} turn")
 
             self.show_board()
 
             # taking user input
-            row, col = self.get_user_play()
+            row, col = self.get_user_play(player)
             row -= 1
             col -= 1
-            # fixing the spot
-            if self.is_spot_clear(row, col):
-                self.fix_spot(row, col, player)
 
+            # fixing the spot
+            if self.is_spot_clear(row, col, player):
+                self.fix_spot(row, col, player)
 
             # checking whether current player is won or not
             if self.is_player_win(player):

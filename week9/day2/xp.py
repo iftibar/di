@@ -23,8 +23,7 @@ class Currency:
 
     def __iadd__(self, other):
         try:
-            self.value = self.num + other.num
-            print(self.value)
+            return self.num + other.num
 
         except:
             self.value = self.num + other
