@@ -1,9 +1,11 @@
 import random
 
+
 class Card():
     def __init__(self, val, suit):
         self.suit = suit
         self.val = val
+
 
 class Deck():
     def __init__(self, deck):
@@ -24,5 +26,3 @@ val = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
 
 deck_of_cards = [Card(val, s) for val in range(1, 14) for s in suit]
 print(Card(11, 'spades'))
-
-

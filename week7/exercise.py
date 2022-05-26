@@ -35,23 +35,25 @@
 # print(alist)
 
 def febbu(num):
-        a = 0
-        b = 1
-        for i in range(num):
-            yield a
-            print("first", a)
-            temp = a
-            a = b
-            b = b + temp
-            print(a, b)
+    a = 0
+    b = 1
+    for i in range(num):
+        yield a
+        print("first", a)
+        temp = a
+        a = b
+        b = b + temp
+        print(a, b)
+
+
 #
 # for x in febbu(5):
 #     print(x)
 
-        # list = [0, 1]
-        # for i in range(2, num):
-        #     list.append(list[i-1] + list[i-2])
-        #     print(list)
+# list = [0, 1]
+# for i in range(2, num):
+#     list.append(list[i-1] + list[i-2])
+#     print(list)
 
 #
 # febbu(1000)
@@ -169,6 +171,7 @@ class MyClass(object):
     count = 0
 
     def __init__(self, val):
+
         self.val = self.filterint(val)
         MyClass.count += 1
 
