@@ -1,5 +1,5 @@
 class Circle():
-    circle_list = []
+    circle_list = [] # make it as private by adding __
     def __init__(self, radius):
         self.radius = radius
         self.diameter = self.radius * 2
