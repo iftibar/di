@@ -5,20 +5,20 @@ class Currency:
 
     def __str__(self):
         print(f"{self.num} {self.currency}s")
-        return ""
+        return "" # why you return empty string?
 
     def __int__(self):
-        print(self.num)
-        return self.num
+        print(self.num) # print is redundant I think you added it just for testing
+        return self.num 
 
     def __repr__(self):
         print(f"{self.num} {self.currency}s")
-        return ""
+        return "" # why you return empty string?
 
     def __add__(self, other):
         if self.currency != other.currency:
             raise Exception("TypeError: Cannot add between Currency type <dollar> and <shekel>")
-        try:
+        try: # at this case the exception is redundant 
             print(self.num + other)
         except:
             print(self.num + other.num)
@@ -26,7 +26,7 @@ class Currency:
 
 
     def __iadd__(self, other):
-        try:
+        try: # try to think for other solution
             self.num = self.num + other.num
 
         except:
