@@ -1,6 +1,6 @@
 class City:
     buildings = []
-    averages = []
+    averages = [] # I dont think that we need this
 
     def __init__(self, name):
         self.name = name
@@ -18,12 +18,12 @@ class Building(City):
 
     def __init__(self, address):
         self.address = address
-        super().__init__(City)
+        super().__init__(City) # the super must be at the first line of the init
 
     def construct(self, address):
         self.buildings.append(address)
         print(f"we have a new building at {self.address}")
-        return None
+        return None # by default it will return None
 
     def average():
         sum_of_age = 0
@@ -38,7 +38,7 @@ class Human(Building):
         self.age = age
         self.living_place = living_place
         print("a human was born")
-        super().__init__(Building)
+        super().__init__(Building) # the super must be at the first line of the init
 
     def move(self, building):
         self.living_place = building
