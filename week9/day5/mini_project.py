@@ -1,11 +1,11 @@
 class Queue:
-    humans = []
+    humans = [] # why you make it global
 
     def add_person(self, person):
         self.humans.append(person)
 
     def find_in_queue(self, person):
-        if person in self.humans:
+        if person in self.humans: # inorder to access to global attribute use the class name which is best practice like: Queue.humans
             return self.humans.index(person)
         else:
             return None
@@ -19,7 +19,7 @@ class Queue:
     def get_next(self):
         if self.humans:
             return self.humans.pop(0)
-        else:
+        else: # it's redundant, it will return by default none
             return None
 
     def get_next_blood_type(self, blood_type):
@@ -35,7 +35,7 @@ class Queue:
 
     def rearange_queue(self):
         for i, person in enumerate(self.humans):
-            try:
+            try: # why you srouund it with try and except, it's redundant
                 next = self.humans[i+1]
                 if next.name in person.family:
                     print(i, len(self.humans))
@@ -44,7 +44,7 @@ class Queue:
                     else:
                         next.swap(next, self.humans[i+2])
             except:
-                pass
+                pass # it's bad practice always at the except we must do something, event print
         for person in self.humans:
             print(person.name, end=" ")
         print('')
