@@ -167,28 +167,81 @@ def febbu(num):
 #     for cats in sort_cats:
 #         print(cats.name)
 # find_oldest(cat1, cat2, cat3, cat4)
-class MyClass(object):
-    count = 0
+# class MyClass(object):
+#     count = 0
+#
+#     def __init__(self, val):
+#
+#         self.val = self.filterint(val)
+#         MyClass.count += 1
+#
+#     @staticmethod
+#     def filterint(value):
+#         if not isinstance(value, int):
+#             print("Entered value is not an INT, value set to 0")
+#             return 0
+#         else:
+#             return value
+#
+#
+# a = MyClass('a')
+# b = MyClass(10)
+# c = MyClass(15)
+#
+# print(a.val)
+# print(b.val)
+# print(c.val)
+# print(a.filterint(100))
 
-    def __init__(self, val):
-
-        self.val = self.filterint(val)
-        MyClass.count += 1
-
-    @staticmethod
-    def filterint(value):
-        if not isinstance(value, int):
-            print("Entered value is not an INT, value set to 0")
-            return 0
-        else:
-            return value
 
 
-a = MyClass('a')
-b = MyClass(10)
-c = MyClass(15)
+# os.mkdir("practice")
+# os.makedirs("week1/day1/lesson")
+# from collections import deque
+# #initialization
+# list = ["a","b","c"]
+# deq = deque(list)
+# print(deq)
+#
+# #insertion
+# deq.append("z")
+# deq.appendleft("g")
+# print(deq)
+# #removal
+# deq.pop()
+# # deq.popleft()
+# print(deq)
+# import collections
+# from collections import OrderedDict
+# order = OrderedDict()
+# order['a'] = 8
+# order['c'] = 3
+# order['b'] = 2
+#
+# print(order)
+#
+# import datetime
+# today = datetime.date.today()
+# actual = datetime.datetime.now()
+# later = actual + datetime.timedelta(days=45, hours=10, minutes= 29, seconds=46)
+# birthday = datetime.datetime(1980, 8, 5)
+# delta_m = birthday.month -  today.month
+# delta_d = birthday.day - today.day
+# print(delta_m, delta_d)
+#
+# import re
+#
+# string = "at what time?"
+# match = re.sub("\s","!!!",string)
+# print (match)
 
-print(a.val)
-print(b.val)
-print(c.val)
-print(a.filterint(100))
+
+
+with open(r"C:\Users\user\Desktop\DI\nameslist.txt", mode='r') as f:
+    lines = f.readlines()
+    # print(lines[4])
+    f.seek(5)
+    print(f.readlines(4))
+    lines_without_n = [line.strip("\n") for line in lines]
+    darth_count = lines_without_n.count("Darth")
+    print(darth_count)

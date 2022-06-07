@@ -5,18 +5,19 @@ class Airline:
     def __init__(self, id, name):
         self.id = id
         self.name = name
-        self.planes = []
+        self.planes_airline = []
 
 
 
-class Flight:
+class Flight(Airline):
     def __init__(self, destination, origin, plane, id):
         self.date = datetime.date
         self.destination = destination
         self.origin = origin
         self.plane = plane
         self.id = id
-
+        super(Flight, self).__init__()
+        
     def take_off(self):
         pass
 
@@ -36,21 +37,22 @@ class Airplane(Flight):
         self.current_loc = destination
 
     def location_on_date(self, date):
-        self.
+        self
 
     def available_on_date(self, date, location):
         pass
 
 
-class Airport:
+class Airport(Airplane):
     def __init__(self, city):
         self.city = city
         self.planes = []
         self.scheduled_departures = []
         self.scheduled_arrivals = []
+        super(Airport, self).__init__()
 
-    def schedule_flight(self, destination, datetime):
-        pass
+    def schedule_flight(self, destination, date):
+        if self.planes_airline in self.available_on_date(date):
 
     def info(self, start_date, end_date):
         pass
