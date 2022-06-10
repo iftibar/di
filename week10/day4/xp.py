@@ -30,6 +30,10 @@
 # main()
 
 import json
+import flask
+
+app = flask.Flask(__name__)
+
 
 sampleJson = """{ 
    "company":{ 

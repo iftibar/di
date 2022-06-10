@@ -235,13 +235,15 @@ def febbu(num):
 # match = re.sub("\s","!!!",string)
 # print (match)
 
+#
+#
+# with open(r"C:\Users\user\Desktop\DI\nameslist.txt", mode='r') as f:
+#     lines = f.readlines()
+#     # print(lines[4])
+#     f.seek(5)
+#     print(f.readlines(4))
+#     lines_without_n = [line.strip("\n") for line in lines]
+#     darth_count = lines_without_n.count("Darth")
+#     print(darth_count)
 
 
-with open(r"C:\Users\user\Desktop\DI\nameslist.txt", mode='r') as f:
-    lines = f.readlines()
-    # print(lines[4])
-    f.seek(5)
-    print(f.readlines(4))
-    lines_without_n = [line.strip("\n") for line in lines]
-    darth_count = lines_without_n.count("Darth")
-    print(darth_count)
