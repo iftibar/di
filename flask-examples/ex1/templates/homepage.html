@@ -1,0 +1,36 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Homepage</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    {% if name == "bob" %}-->
+<!--        <h1>Hello to bob</h1>-->
+<!--    {% else %}-->
+<!--        <h1>Unknown user</h1>-->
+<!--    {% endif %}-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+{% extends "main-template.html" %}
+
+
+{% block title %}
+Homepage
+{% endblock %}
+
+
+{% block body %}
+
+    {{ super() }}
+
+    {% if name == "bob" %}
+        <h1>Hello to bob</h1>
+    {% else %}
+        <h1>Unknown user</h1>
+    {% endif %}
+
+{% endblock %}

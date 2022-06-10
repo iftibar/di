@@ -1,0 +1,18 @@
+{% extends "main-template.html" %}
+
+{% block title %}
+Articles
+{% endblock %}
+
+
+{% block body %}
+
+    {%  for article in  articles %}
+        <h1>{{ article["title"] }}</h1>
+        <h2>{{ article["content"] }}</h2>
+        <h3>{{ article["author"] }}</h3>
+    {% endfor %}
+
+    <a href={{ url_for('blog', username="unknown") }}> Go back to homepage </a>
+
+{% endblock %}
