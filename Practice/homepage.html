@@ -6,5 +6,19 @@
 </head>
 <body>
     <h1>Hello there madafakaaaaaa!!!</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.first_name.label }}
+        {{ form.first_name(size=32) }}
+
+        {{ form.last_name.label }}
+        {{ form.last_name(size=32) }}
+
+        {{ form.age.label }}
+        {{ form.age(size=5) }}
+
+        {{ form.submit() }}
+    </form>
 </body>
 </html>

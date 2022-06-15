@@ -1,0 +1,8 @@
+-- SELECT * FROM items
+-- SELECT * FROM items WHERE price > 81
+-- SELECT * FROM items WHERE price < 301
+-- SELECT * FROM customers WHERE last_name = 'Smith'
+-- SELECT * FROM customers WHERE last_name = 'Jones'
+SELECT * FROM customers WHERE first_name != 'Scott'
+
+
