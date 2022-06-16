@@ -1,0 +1,2 @@
+-- SELECT COUNT(*) FROM actors;
+select * from actors
