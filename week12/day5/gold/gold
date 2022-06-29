@@ -1,0 +1,11 @@
+-- select category_id, count(*) from film_category group by category_id order by category_id
+
+--  select * from film where rental_rate<3 and length<120 and rating='G' or rental_rate<3 and length<120 and rating='PG-13' order by title
+
+-- UPDATE customer
+-- SET last_name = 'BAR', 
+-- 	first_name = 'IFTACH', 
+-- 	email ='agol.clinic@gmail.com'
+--  WHERE customer_id = 3
+--  RETURNING *
+--  select * FROM customer order by customer_id
