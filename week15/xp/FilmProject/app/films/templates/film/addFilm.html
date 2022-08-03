@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'partials/base.html' %}
+
+{% include 'partials/navbar.html' %}
+
+{% block my_block %}
+
+<h1>Add film</h1>
+
+<div class="form-control-lg">
+   <form method="POST">
+      {{ form.hidden_tag() }}
+
+      {{ form.title(size=36, placeholder="title") }}
+      <br>
+      {{ form.release_date(size=36, placeholder="release date") }}
+      <br>
+       {{ form.category }}
+      <br>
+      {{ form.created_in_country }}
+      <br>
+      {{ form.submit }}
+   </form>
+</div>
+{% endblock %}

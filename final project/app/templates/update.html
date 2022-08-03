@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+
+    <div class="center form-control-lg">
+
+           <form method="POST"  enctype="multipart/form-data">
+
+            {{ form.hidden_tag() }}
+
+            {{ form.name(size=36, class="input-design", value=user.name) }}
+            <br>
+            {{ form.category(size=36, class="input-design", value=user.category) }}
+            <br>
+            {{ form.phone(size=36, class="input-design", placeholder="phone number") }}
+            <br>
+            {{ form.email(size=36, class="input-design", value=user.email) }}
+            <br>
+            {{ form.website(size=36, class="input-design", placeholder="website") }}
+            <br>
+            {{ form.facebook(size=36, class="input-design", placeholder="facebook page") }}
+            <br>
+            {{ form.address(size=36, class="input-design", placeholder="address") }}
+            <br>
+            {{ form.sentence(size=36, class="input-design", placeholder="one killer sentence about") }}
+            <br> <br>
+            <input type=file name=file>
+            <br>
+                {{ form.submit() }}
+          </form>
+    </div>
+
+{% endblock %}

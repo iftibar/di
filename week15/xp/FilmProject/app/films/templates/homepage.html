@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'partials/base.html' %}
+
+{% block my_block %}
+
+{% include 'partials/navbar.html' %}
+
+ {% for film in films %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ film.title }} BY {{ film.director}} </h5>
+        <p class="card-text">date: {{ film.release_date }}</p>
+        <p class="card-text">category: {{ film.categories[0] }}</p>
+        <p class="card-text">country: {{ film.created_in_country }}</p>
+
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  {% endfor %}
+
+
+{% endblock %}

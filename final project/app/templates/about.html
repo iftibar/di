@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+
+        <h3><span> welcome to prolo!<br></span>
+                    Here you can create your digital business card in 2 seconds,<br>
+                    recommend your favorite business owners to your friends <br>
+                    and see their recommendations to get the right decision when you need a pro!   <br>
+        {% if current_user.is_authenticated %}
+            {{ pass }}
+        {% else %}
+          <br> <br> start working with us <br>  <a class="btn btn-primary" href="{{ url_for('register') }}">register now</a> </h3>
+        {% endif %}
+{% endblock %}
+{% block my_block2 %}
+
+         <div class="container">
+             <div class="row">
+                 {%  for card in cards  %}
+                     {% if card.email != current_user.email %}
+                         <div class="minibox col" id="card">
+                             <div class="left">
+                                 <img class="image" src="{{ images[card.email] }}"><br><br>
+                                 <h2><b>{{ card.name.capitalize() }}</b></h2>
+                                 <hr class="hr">
+                                 <h2> {{ card.category }} </h2><br><br><br>
+                                 <p><b> {{ card.sentence }}</b></p>
+                             </div>
+                             <div class="right">
+                                 <p> <i class="fa-solid fa-at fa-1x"></i> &nbsp;{{ card.email }}<br><br></p>
+                                 <p> <i class="fa-solid fa-phone fa-1x">&nbsp; </i> {{ card.phone }}</p><br>
+                                 <p><a href="{{card.website}}"><i class="fa-solid fa-link fa-1x"></i>&nbsp; website<br><br></a></p>
+                                 <p><a href="{{card.facebook}}"><i class="fa-brands fa-facebook fa-1x"></i>&nbsp; facebook page<br><br></a></p>
+                                 <p><i class="fa-solid fa-location-dot fa-1x"></i>&nbsp; {{ card.address }}</p>
+                             </div>
+                            </div>
+             </div>
+            {% endif %}
+            {%  endfor  %}
+
+{% endblock %}

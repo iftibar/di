@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block my_block %}
+
+    <div class="center form-control-lg">
+
+           <form method="POST">
+            {{ form.hidden_tag() }}
+
+            {{ form.name(size=36, class="input-design", placeholder="name") }}
+            <br>
+            {{ form.email(size=36, class="input-design", placeholder="email") }}
+            <br>
+            {{ form.password(size=36, class="input-design", placeholder="password") }}
+            <br>
+                {{ form.submit(id="btn") }}
+          </form>
+    </div>
+
+{% endblock %}
