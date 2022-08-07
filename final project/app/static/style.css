@@ -32,7 +32,7 @@ li {
 /* main cover */
 .cover {
     display: flex;
-    height: 88vh;
+    height: 70vh;
     background-size: cover;
     background: url("../static/coverH.jpg") no-repeat center;
     margin: 0;
@@ -90,10 +90,10 @@ h3 {
 
 .box {
     margin: 70px;
-    height: 580px;
-    width: 1100px;
+    height: 500px;
+    width: 800px;
     background-color: wheat;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 25px;
     animation-timing-function: ease;
     overflow: hidden;
@@ -165,14 +165,37 @@ hr {
 
 h4 {
     margin: 15px;
+    font-size: 48px;
+    width: 22em;
+    text-align: center;
+    color:  rgb(11, 83, 107);
+    margin-top: 60px;
+    margin: auto;
+    letter-spacing: 0.03em;
     align-items: center;
-    font-size: 40px;
+    font-weight: 500;
+    background-color: #F2DFC7;
+    border-radius: 25px;
 
 }
 
-p {
-    font-size: 24px;
+h6 {
+     font-size: 38px;
      letter-spacing: 0.03em;
+ }
+
+h8 {
+     font-size: 54px;
+     color:  rgb(11, 83, 107);
+     letter-spacing: 0.03em;
+     font-weight: 600;
+
+ }
+
+
+p {
+    font-size: 20px;
+     letter-spacing: 0.02em;
 }
 
 a, a:hover, a:focus, a:active {
@@ -197,15 +220,32 @@ h7 {
     width: 120px;
 }
 
+h1 {
+    background-color: white;
+    font-size: 20px;
+}
 
 .minibox {
     margin: 40px;
-    height: 440px;
-    width: 740px;
+    height: 530px;
+    width: 570px;
     background-color: wheat;
     border: 2px solid black;
     border-radius: 25px;
     animation-timing-function: ease;
     overflow: hidden;
+}
 
+.like_btn {
+    background-color: blue;
+    height: 30px;
+    width: 60px;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+
+    justify-content: center;
+     border: 2px solid #4CAF50;
 }

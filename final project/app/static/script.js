@@ -30,6 +30,7 @@ color4.addEventListener("input", setTextColor);
 let fontBtn = document.getElementById('fontBtn');
 let fonts = [ 'Cambria', 'Cochin', 'Georgia', 'Times', 'monospace', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', 'sans-serif',  'Impact', 'Arial Narrow Bold'];
 let i = 0;
+
 function changeFont() {
     console.log(fonts[i])
     left.style.fontFamily = fonts[i]

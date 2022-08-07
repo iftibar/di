@@ -8,21 +8,21 @@
 
             {{ form.hidden_tag() }}
 
-            {{ form.name(size=36, class="input-design", value=user.name) }}
+            {{ form.name(size=36, class="input-design", value=card.name) }}
             <br>
-            {{ form.category(size=36, class="input-design", value=user.category) }}
+            {{ form.category(size=36, class="input-design", value=card.category) }}
             <br>
-            {{ form.phone(size=36, class="input-design", placeholder="phone number") }}
+            {{ form.phone(size=36, class="input-design", value=card.phone) }}
             <br>
             {{ form.email(size=36, class="input-design", value=user.email) }}
             <br>
-            {{ form.website(size=36, class="input-design", placeholder="website") }}
+            {{ form.website(size=36, class="input-design", value=card.website) }}
             <br>
-            {{ form.facebook(size=36, class="input-design", placeholder="facebook page") }}
+            {{ form.facebook(size=36, class="input-design", value=card.facebook) }}
             <br>
-            {{ form.address(size=36, class="input-design", placeholder="address") }}
+            {{ form.address(size=36, class="input-design", value=card.address) }}
             <br>
-            {{ form.sentence(size=36, class="input-design", placeholder="one killer sentence about") }}
+            {{ form.sentence(size=36, class="input-design", value=card.sentence) }}
             <br> <br>
             <input type=file name=file>
             <br>

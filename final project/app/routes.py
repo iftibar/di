@@ -1,21 +1,15 @@
 import os.path
 import flask_bcrypt
 from flask import flash, url_for, render_template, redirect, request
-from sqlalchemy import delete
-from werkzeug.utils import secure_filename
 from app import app, db
 from app.forms import RegistrationForm, LoginForm, AddBusiness, UpdateCard
 from app.models import User, Card
 from flask_login import login_user, current_user, logout_user, login_required
 
+
 @app.route('/')
 def index():
-    cards = Card.query.all()
-    cards = Card.query.all()
-    images = {}
-    for card in cards:
-        images[card.email] = url_for('static', filename='uploads/' + card.email + '.jpg')
-    return render_template('about.html', cards=cards, images=images)
+    return redirect('/about')
 
 
 @app.route('/mission')
@@ -27,9 +21,31 @@ def mission():
 def about():
     cards = Card.query.all()
     images = {}
+    likes = {}
     for card in cards:
         images[card.email] = url_for('static', filename='uploads/' + card.email + '.jpg')
-    return render_template('about.html', cards=cards, images=images)
+        card.liked = current_user in card.liked_by
+        likes[card.email] = len(card.liked_by)
+
+    return render_template('about.html', cards=cards, images=images,  likes=likes)
+
+
+@app.route('/<card_id>/like', methods=['GET', 'POST'])
+def like(card_id):
+        card = Card.query.filter_by(id=card_id).first_or_404()
+        if current_user not in card.liked_by:
+            card.liked_by.append(current_user)
+            db.session.commit()
+        return redirect(request.referrer)
+
+
+@app.route('/<card_id>/unlike', methods=['GET', 'POST'])
+def unlike(card_id):
+    card = Card.query.filter_by(id=card_id).first_or_404()
+    if current_user in card.liked_by:
+        card.liked_by.remove(current_user)
+        db.session.commit()
+    return redirect(request.referrer)
 
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -93,8 +109,8 @@ def create_card():
 @app.route('/update', methods=['GET', 'POST'])
 def update():
     form = UpdateCard()
+    card = Card.query.filter_by(email=current_user.email).first()
     if form.validate_on_submit():
-        card = Card.query.filter_by(email=current_user.email).first()
         card.name = form.name.data
         card.category = form.category.data
         card.phone = form.phone.data
@@ -110,7 +126,7 @@ def update():
         db.session.add(card)
         db.session.commit()
         return redirect('/account')
-    return render_template('update.html', form=form, user=current_user)
+    return render_template('update.html', form=form, user=current_user, card=card)
 
 
 @app.route("/account")
@@ -127,7 +143,3 @@ def account():
 def logout():
     logout_user()
     return redirect(url_for('about'))
-
-@app.route("/test")
-def test():
-    return render_template('test.html')
